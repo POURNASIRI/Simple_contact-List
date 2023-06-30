@@ -18,7 +18,7 @@ function Contacts({contactList,searchTerm,onDelete}) {
             contactList
             .filter(({name})=>name.includes(searchTerm))
             .map(({id,name,number,email}) => 
-            <ContactsItem key={id} name={name} number={number} email={email} onDelete={() =>onDelete(id)}/>)
+            <ContactsItem key={id} name={name} number={number} email={email} searchTerm={searchTerm} onDelete={() =>onDelete(id)}/>)
           }
             <tr>
 

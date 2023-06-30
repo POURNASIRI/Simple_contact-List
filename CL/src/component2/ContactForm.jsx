@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { FaPlus } from "react-icons/fa";
 
-
+const phoneValid = /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
 
 function ContactForm({onAddContact,onSearch,contactList}) {
 
@@ -59,9 +59,10 @@ function ContactForm({onAddContact,onSearch,contactList}) {
         <form onSubmit={onFormSubmit} action=""  className='form' >
             <div className='form__input'>
                 <input className={flag ? "active" : null} value={name.trim()} onChange={nameHandler} type="text" placeholder='Name' />
+                <p className={flag ? "error" :null}>username already exists</p>
             </div>
             <div className='form__input'>
-                <input value={phone.trim()} onChange={ phoneHandler} type="text" placeholder='Phone' />
+                <input value={phone.trim()} onChange={ phoneHandler} type="number" placeholder='Phone' />
             </div>
             <div className='form__input'>
                 <input value={mail.trim()} onChange={mailHandler} type="email" placeholder='Email' />

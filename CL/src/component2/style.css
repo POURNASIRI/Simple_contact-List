@@ -5,6 +5,10 @@
     list-style: none;
 }
 
+html{
+    font-size: 62.5%;
+}
+
 
 body{
     width: 100%;
@@ -32,7 +36,7 @@ body{
     height: 50px;
     border-radius: 5px;
     border: transparent;
-    font-size: 16px;
+    font-size: 1.6rem;
     padding: 0 10px;
 }
 
@@ -60,8 +64,14 @@ body{
     border:1px solid #ccc ;
     border-radius: 5px;
     outline: none;
-    font-size: 16px;
+    font-size: 1.6rem;
+    transition: .2s ease-in-out;
 }
+.form__input input[type=number]{
+    -moz-appearance: textfield;
+
+}
+
 
 .btn{
     height: 50px;
@@ -74,7 +84,7 @@ body{
     align-items: center;
     border: transparent;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.6rem;
     cursor: pointer;
     background-color:#0079FF;
     color: #fff;
@@ -91,11 +101,13 @@ body{
 table{
     width: 80%;
     border-collapse: collapse;
+    font-size: 1.6rem;
 
 }
 table th{
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+    color: #777;
 }
 table th li{
     display: flex;
@@ -113,4 +125,35 @@ table tr td{
 
 .form__input .active{
    border: 1px solid red;
+}
+
+
+
+.delete__btn{
+    padding:8px 16px;
+    font-size: 1.2rem;
+    border:transparent ;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .7;
+    transition: all.3s;
+}
+
+.delete__btn:hover{
+    opacity: 1;
+    background-color: #0079FF;
+    color: #fff;
+}
+
+.form__input p{
+    font-size: 1.6rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in-out;
+}
+
+.form__input .error{
+    opacity: 1;
+    visibility: visible;
+    color: red;
 }
